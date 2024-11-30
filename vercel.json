@@ -1,0 +1,13 @@
+{
+	"build": [{
+		"src": "tinga_tinga_hub/wsgi.py",
+		"use": "@vercel/python",
+		"config": { "maxLmbdaSize": "115mb", "runtime": "python3.11.3" }
+	}],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "tinga_tinga_hub/wsgi.py"
+		}
+	]
+}
